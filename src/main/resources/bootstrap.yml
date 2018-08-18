@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: train-19779
+  cloud:
+    config:
+      failFast: true
+      retry:
+        maxAttempts: 6
+        multiplier: 1.5
+        maxInterval: 2000
+      uri: config-server.training:8100
+      enabled: false
+management:
+  port: 18081
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+
+server:
+  port: 19779
